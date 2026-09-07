@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty Services — HUKEAZ Products Tanzania</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="brand-logo">
+                <span class="title">HUKEAZ</span>
+                <span class="subtitle">PRODUCTS • TANZANIA</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="membership.html">Membership</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                 
+                                   <div style="margin-top:0.5rem;">
+                        <a href="https://www.instagram.com/hukeazonestop1_shop_/" target="_blank" rel="noopener"
+                           style="display:inline-flex;align-items:center;gap:0.6rem;text-decoration:none;color:var(--text-muted);transition:var(--transition);">
+                            <!-- Instagram Logo -->
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient id="ig-gradient" x1="0%" y1="100%" x2="100%" y2="0%">
+                                        <stop offset="0%" stop-color="#f09433"/>
+                                        <stop offset="45%" stop-color="#e6683c"/>
+                                        <stop offset="60%" stop-color="#dc2743"/>
+                                        <stop offset="90%" stop-color="#cc2366"/>
+                                        <stop offset="100%" stop-color="#bc1888"/>
+                                    </linearGradient>
+                                </defs>
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="url(#ig-gradient)" stroke-width="2"/>
+                                <circle cx="12" cy="12" r="4" stroke="url(#ig-gradient)" stroke-width="2"/>
+                                <circle cx="17.5" cy="6.5" r="1.2" fill="url(#ig-gradient)"/>
+                            </svg>
+                     
+                        </a>
+                    </div>
+                <button class="btn btn-gold" onclick="openBookingModal()">Book Now</button>
+                <button class="mobile-toggle" onclick="toggleMobileNav()">☰</button>
+            </div>
+        </div>
+        <div class="mobile-nav" id="mobile-nav">
+            <a href="index.html">Home</a>
+            <a href="services.html" class="active">Services</a>
+            <a href="shop.html">Shop</a>
+            <a href="membership.html">Membership</a>
+            <a href="contact.html">Contact</a>
+            <button class="btn btn-gold" style="margin-top:0.5rem;" onclick="openBookingModal(); toggleMobileNav();">Book Appointment</button>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <span class="section-label">Professional Parlour</span>
+            <h1>Our Beauty <span class="gold-text">Services</span></h1>
+            <p>Expert treatments by certified beauticians in Dar es Salaam.</p>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+           
+
+            <div class="tab-navigation">
+                <button class="tab-btn active" onclick="filterServices('all')">All Services</button>
+                <button class="tab-btn" onclick="filterServices('hair')">Hair & Braiding</button>
+                <button class="tab-btn" onclick="filterServices('nails')">Nail Care</button>
+                <button class="tab-btn" onclick="filterServices('skin')">Facials & Skin</button>
+                <button class="tab-btn" onclick="filterServices('makeup')">Makeup & Lashes</button>
+            </div>
+            <div class="grid cards-grid" id="services-container"></div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="grid footer-grid">
+                <div>
+                    <a href="index.html" class="brand-logo" style="margin-bottom:1rem;">
+                        <span class="title">HUKEAZ</span>
+                        <span class="subtitle">PRODUCTS • TANZANIA</span>
+                    </a>
+                    <p style="font-size:0.8rem;color:var(--text-muted);max-width:300px;">Tanzania's premier destination for luxury beauty parlour services and authentic cosmetics.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="membership.html">Membership</a></li>
+                    </ul>
+                </div>
+                                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div style="margin-top:0.5rem;">
+                        <a href="https://www.instagram.com/hukeazonestop1_shop_/" target="_blank" rel="noopener"
+                           style="display:inline-flex;align-items:center;gap:0.6rem;text-decoration:none;color:var(--text-muted);transition:var(--transition);">
+                            <!-- Instagram Logo -->
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient id="ig-gradient" x1="0%" y1="100%" x2="100%" y2="0%">
+                                        <stop offset="0%" stop-color="#f09433"/>
+                                        <stop offset="45%" stop-color="#e6683c"/>
+                                        <stop offset="60%" stop-color="#dc2743"/>
+                                        <stop offset="90%" stop-color="#cc2366"/>
+                                        <stop offset="100%" stop-color="#bc1888"/>
+                                    </linearGradient>
+                                </defs>
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="url(#ig-gradient)" stroke-width="2"/>
+                                <circle cx="12" cy="12" r="4" stroke="url(#ig-gradient)" stroke-width="2"/>
+                                <circle cx="17.5" cy="6.5" r="1.2" fill="url(#ig-gradient)"/>
+                            </svg>
+                            <span style="font-size:0.9rem;">Instagram</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact & Hours</h4>
+                    <p style="font-size:0.8rem;color:var(--text-muted);">Dar es Salaam, Tanzania</p>
+                    <p style="font-size:0.8rem;color:var(--text-muted);margin-top:0.4rem;">Mon–Sat: 9AM – 8PM</p>
+                    <p style="font-size:0.8rem;color:var(--text-muted);">Sun: 10AM – 6PM</p>
+                </div>
+            </div>
+            <div class="copyright">© 2026 HUKEAZ Products Tanzania. All Rights Reserved.</div>
+        </div>
+    </footer>
+
+    <div class="modal" id="booking-modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('booking-modal')">×</button>
+            <h2 style="margin-bottom:1.5rem;">Book Your Beauty Experience</h2>
+                        <!-- 
+              FORMSPREE BOOKING FORM
+              Replace YOUR_FORM_ID with your real Formspree form ID
+              Example: action="https://formspree.io/f/xpwzgkqy"
+            -->
+                        <!--
+              BOOKING FLOW:
+              1. Customer fills this form
+              2. Details are sent to your email (Formspree)
+              3. Customer is redirected to the correct Snipe payment page
+
+              SETUP:
+              - Replace YOUR_FORM_ID with your Formspree form ID
+              - Put each service Snipe link in js/data.js (buyLink)
+            -->
+            <form id="booking-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" onsubmit="handleBookingFormSubmit(event)">
+                <input type="hidden" name="_subject" value="New HUKEAZ Beauty Booking">
+
+                <div class="grid" style="grid-template-columns:1fr 1fr;gap:1rem;">
+                    <div class="form-group">
+                        <label>Select Service</label>
+                        <select class="form-control" name="service" id="book-service" required>
+                            <option value="">Choose service...</option>
+                            <option value="Keratin Hair Smoothing (TZS 120,000)">Keratin Hair Smoothing (TZS 120,000)</option>
+                            <option value="Knotless Braids (TZS 65,000)">Knotless Braids (TZS 65,000)</option>
+                            <option value="Luxury Gel Manicure & Pedicure (TZS 45,000)">Luxury Gel Manicure & Pedicure (TZS 45,000)</option>
+                            <option value="Deep Cleansing Hydrating Facial (TZS 80,000)">Deep Cleansing Hydrating Facial (TZS 80,000)</option>
+                            <option value="Bridal Glam Makeup Special (TZS 150,000)">Bridal Glam Makeup Special (TZS 150,000)</option>
+                            <option value="Russian Volume Lash Extensions (TZS 70,000)">Russian Volume Lash Extensions (TZS 70,000)</option>
+                            <option value="Silk Press & Blowout (TZS 55,000)">Silk Press & Blowout (TZS 55,000)</option>
+                            <option value="Acrylic Full Set (TZS 50,000)">Acrylic Full Set (TZS 50,000)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Preferred Beautician</label>
+                        <select class="form-control" name="beautician">
+                            <option value="Any Available Specialist">Any Available Specialist</option>
+                            <option value="Amina K. (Master Stylist)">Amina K. (Master Stylist)</option>
+                            <option value="Grace M. (Nail Artist)">Grace M. (Nail Artist)</option>
+                            <option value="Farida S. (Facial Specialist)">Farida S. (Facial Specialist)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Date</label>
+                        <input type="date" class="form-control" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Time Slot</label>
+                        <select class="form-control" name="time" required>
+                            <option value="10:00 AM">10:00 AM</option>
+                            <option value="12:30 PM">12:30 PM</option>
+                            <option value="03:00 PM">03:00 PM</option>
+                            <option value="05:30 PM">05:30 PM</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" class="form-control" name="name" placeholder="e.g. Neema Joshua" required>
+                </div>
+
+                <div class="grid" style="grid-template-columns:1fr 1fr;gap:1rem;">
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" class="form-control" name="phone" placeholder="+255 ..." required>
+                    </div>
+                    <div class="form-group">
+                        <label>Preferred Payment</label>
+                        <select class="form-control" name="payment">
+                            <option value="M-Pesa">M-Pesa</option>
+                            <option value="Airtel Money">Airtel Money</option>
+                            <option value="Card">Visa / Mastercard</option>
+                            <option value="Cash">Pay at Salon</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Notes (optional)</label>
+                    <textarea class="form-control" name="notes" rows="2" placeholder="Any special requests..." style="resize:vertical;"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-gold" style="width:100%;margin-top:1rem;">
+                    Proceed to Payment
+                </button>
+                <p style="font-size:0.75rem;color:var(--text-muted);text-align:center;margin-top:0.8rem;">
+                    You will pay first. After payment, your booking details are sent to us on WhatsApp automatically.
+                </p>
+            </form>
+        </div>
+    </div>
+    <div class="modal" id="cart-modal">
+        <div class="modal-content" style="max-width:550px;">
+            <button class="modal-close" onclick="closeModal('cart-modal')">×</button>
+            <h2 style="margin-bottom:1.5rem;">Shopping Cart</h2>
+            <div id="cart-items-container" style="min-height:120px;margin-bottom:1.5rem;"></div>
+            <div style="border-top:1px solid var(--border-color);padding-top:1rem;">
+                <div style="display:flex;justify-content:space-between;margin-bottom:0.5rem;"><span style="color:var(--text-muted);">Subtotal</span><span id="cart-subtotal">TZS 0</span></div>
+                <div style="display:flex;justify-content:space-between;margin-bottom:1rem;"><span style="color:var(--text-muted);">VAT</span><span id="cart-vat">TZS 0</span></div>
+                <div style="display:flex;justify-content:space-between;margin-bottom:1.5rem;font-size:1.2rem;font-weight:700;color:var(--gold-primary);"><span>Total</span><span id="cart-total">TZS 0</span></div>
+                <button class="btn btn-gold" style="width:100%;" onclick="alert('Checkout...')">Checkout</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="account-modal">
+        <div class="modal-content" style="max-width:480px;">
+            <button class="modal-close" onclick="closeModal('account-modal')">×</button>
+            <h2 style="margin-bottom:1.5rem;">Client Login</h2>
+            <div class="form-group"><label>Phone or Email</label><input type="text" class="form-control"></div>
+            <div class="form-group"><label>Password</label><input type="password" class="form-control"></div>
+            <button class="btn btn-gold" style="width:100%;" onclick="alert('Coming soon')">Sign In</button>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

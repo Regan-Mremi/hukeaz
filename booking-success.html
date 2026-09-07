@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Successful — HUKEAZ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .success-wrap {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            text-align: center;
+        }
+        .success-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-gold);
+            border-radius: var(--radius-lg);
+            padding: 3rem 2rem;
+            max-width: 520px;
+            width: 100%;
+            box-shadow: var(--shadow-luxury);
+        }
+        .success-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+        .success-card h1 {
+            font-size: 1.8rem;
+            margin-bottom: 0.8rem;
+        }
+        .success-card p {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+        .booking-summary {
+            text-align: left;
+            background: #120E11;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 1.2rem 1.4rem;
+            margin-bottom: 1.8rem;
+            font-size: 0.88rem;
+            line-height: 1.8;
+        }
+        .booking-summary strong {
+            color: var(--gold-primary);
+        }
+    </style>
+</head>
+<body>
+    <div class="success-wrap">
+        <div class="success-card">
+            <div class="success-icon">✅</div>
+            <h1>Payment Successful</h1>
+            <p>Thank you! Your booking details are being sent to HUKEAZ on WhatsApp.</p>
+
+            <div class="booking-summary" id="summary">
+                <em style="color:var(--text-muted);">Loading booking details...</em>
+            </div>
+
+            <a href="#" id="wa-btn" class="btn btn-gold" style="width:100%; margin-bottom:1rem;" target="_blank" rel="noopener">
+                Open WhatsApp Confirmation
+            </a>
+            <a href="index.html" class="btn btn-outline" style="width:100%;">
+                Back to Home
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // ========== YOUR WHATSAPP NUMBER ==========
+        // Country code, no + and no spaces (example: 255656611169)
+        const WHATSAPP_NUMBER = '255656611169';
+
+        function loadBooking() {
+            let data = null;
+            try {
+                data = JSON.parse(sessionStorage.getItem('hukeaz_pending_booking') || 'null')
+                    || JSON.parse(localStorage.getItem('hukeaz_pending_booking') || 'null');
+            } catch (e) {}
+
+            const summaryEl = document.getElementById('summary');
+            const waBtn = document.getElementById('wa-btn');
+
+            if (!data) {
+                summaryEl.innerHTML = '<em style="color:var(--text-muted);">No booking details found. If you already paid, please message us on WhatsApp with your payment receipt.</em>';
+                waBtn.href = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent('Hi HUKEAZ, I just completed a payment. Please confirm my booking.');
+                return;
+            }
+
+            summaryEl.innerHTML =
+                '<div><strong>Service:</strong> ' + escapeHtml(data.service) + '</div>' +
+                '<div><strong>Name:</strong> ' + escapeHtml(data.name) + '</div>' +
+                '<div><strong>Phone:</strong> ' + escapeHtml(data.phone) + '</div>' +
+                '<div><strong>Date:</strong> ' + escapeHtml(data.date) + '</div>' +
+                '<div><strong>Time:</strong> ' + escapeHtml(data.time) + '</div>' +
+                '<div><strong>Beautician:</strong> ' + escapeHtml(data.beautician || 'Any') + '</div>' +
+                '<div><strong>Payment method:</strong> ' + escapeHtml(data.payment || 'N/A') + '</div>' +
+                '<div><strong>Notes:</strong> ' + escapeHtml(data.notes || 'None') + '</div>';
+
+            const waText =
+                '✅ PAID — New HUKEAZ Booking\n\n' +
+                'Service: ' + data.service + '\n' +
+                'Name: ' + data.name + '\n' +
+                'Phone: ' + data.phone + '\n' +
+                'Date: ' + data.date + '\n' +
+                'Time: ' + data.time + '\n' +
+                'Beautician: ' + (data.beautician || 'Any') + '\n' +
+                'Payment method: ' + (data.payment || 'N/A') + '\n' +
+                'Notes: ' + (data.notes || 'None') + '\n\n' +
+                '(Customer completed payment)';
+
+            const waUrl = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(waText);
+            waBtn.href = waUrl;
+
+            // Automatically open WhatsApp after payment
+            setTimeout(function () {
+                window.open(waUrl, '_blank');
+            }, 600);
+
+            // Clear saved booking so it is not sent again
+            try {
+                sessionStorage.removeItem('hukeaz_pending_booking');
+                // keep localStorage briefly in case page reloads; clear after short delay
+                setTimeout(function () {
+                    localStorage.removeItem('hukeaz_pending_booking');
+                }, 3000);
+            } catch (e) {}
+        }
+
+        function escapeHtml(str) {
+            return String(str)
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;');
+        }
+
+        document.addEventListener('DOMContentLoaded', loadBooking);
+    </script>
+</body>
+</html>
