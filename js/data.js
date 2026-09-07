@@ -30,7 +30,7 @@ const productsCatalogue = [
         sub: "Shampoo",
         price: 35000,
          
-        image: "img_2991.jpg",
+        image: "IMG_2991.jpg",
         description: "Clinically proven formula that targets dandruff and scalp irritation.",
         buyLink: "https://snippe.me/pay/dove"
     },
@@ -40,7 +40,7 @@ const productsCatalogue = [
         category: "Hair Care",
         sub: "Shampoo",
         price: 40000,
-        image: "img_2992.jpg",
+        image: "IMG_2992.jpg",
         description: "Strengthening keratin shampoo for smoother, frizz-free hair.",
         buyLink: "https://snippe.me/pay/kojic-acid"
     },
@@ -50,7 +50,7 @@ const productsCatalogue = [
         category: "Hair Care",
         sub: "Oil",
         price: 60000,
-        image: "img_2993.jpg",
+        image: "IMG_2993.jpg",
         description: "Pure Moroccan argan oil for shine and deep nourishment.",
         buyLink: "https://snippe.me/pay/jergens"
     },
@@ -61,7 +61,7 @@ const productsCatalogue = [
         sub: "Eye Makeup",
         price: 40000,
         
-        image: "img_2994.jpg",
+        image: "IMG_2994.jpg",
         description: "Professional 24-shade palette with matte and shimmer finishes.",
         buyLink: "https://snippe.me/pay/soriko"
     },
@@ -74,7 +74,7 @@ const productsCatalogue = [
         minStock: 5,
         stock: 3,
          
-        image: "img_2995.jpg",
+        image: "IMG_2995.jpg",
         description: "Dramatic volume and length in one stroke. Smudge-proof.",
         buyLink: "https://snippe.me/pay/vaseline"
     },
@@ -86,7 +86,7 @@ const productsCatalogue = [
         price: 45000,
         
        
-        image: "img_2996.jpg",
+        image: "IMG_2996.jpg",
         description: "Long-lasting matte finish in a classic red velvet shade.",
         buyLink: "https://snippe.me/pay/pantene"
     },
@@ -97,7 +97,7 @@ const productsCatalogue = [
         sub: "Face",
         price: 50000,
          
-        image: "img_2999.jpg",
+        image: "IMG_2999.jpg",
         description: "Full coverage matte foundation that lasts all day.",
         buyLink: "https://snippe.me/pay/aha"
     },
@@ -110,7 +110,7 @@ const productsCatalogue = [
         minStock: 5,
         stock: 9,
         
-        image: "img_2998.jpg",
+        image: "IMG_2998.jpg",
         description: "Hyaluronic acid serum for intense hydration and plump skin.",
         buyLink: "https://snippe.me/pay/loreal-paris"
     },
@@ -123,7 +123,7 @@ const productsCatalogue = [
         minStock: 5,
         stock: 7,
         vat: "18%",
-        image: "img_3001.jpg",
+        image: "IMG_3001.jpg",
         description: "Brightens dull skin and reduces dark spots with pure Vitamin C.",
         buyLink: "https://snippe.me/pay/tea-tree"
     },
@@ -135,7 +135,7 @@ const productsCatalogue = [
         price: 30000,
         
         
-        image: "img_3002.jpg",
+        image: "IMG_3002.jpg",
         description: "Rich shea butter formula for deep moisture and soft skin.",
         buyLink: "https://snippe.me/pay/lux"
     },
@@ -146,7 +146,7 @@ const productsCatalogue = [
         sub: "Body Lotion",
         price: 45000,
         
-        image: "img_3008.jpg",
+        image: "IMG_3008.jpg",
         description: "Even-tone body lotion with natural brightening ingredients.",
         buyLink: "https://snippe.me/pay/sense-white-cocoon"
     },
@@ -157,7 +157,7 @@ const productsCatalogue = [
         category: "Body Care",
         sub: "Body Lotion",
         price: 30000,
-        image: "img_3009.jpg",
+        image: "IMG_3009.jpg",
         description: "Even-tone body lotion with natural brightening ingredients.",
         buyLink: "https://snippe.me/pay/dettol"
     },
@@ -169,7 +169,7 @@ const productsCatalogue = [
         sub: "Body Lotion",
         price: 40000,
         
-        image: "img_3010.jpg",
+        image: "IMG_3010.jpg",
         description: "Even-tone body lotion with natural brightening ingredients.",
         buyLink: "https://snippe.me/pay/red-heaven"
     },
@@ -181,7 +181,7 @@ const productsCatalogue = [
         sub: "Body Lotion",
         price: 35000,
        
-        image: "img_3011.jpg",
+        image: "IMG_3011.jpg",
         description: "Even-tone body lotion with natural brightening ingredients.",
         buyLink: "https://snippe.me/pay/nivae"
     },
@@ -193,7 +193,7 @@ const productsCatalogue = [
         sub: "Body Lotion",
         price: 35000,
        
-        image: "img_3012.jpg",
+        image: "IMG_3012.jpg",
         description: "Even-tone body lotion with natural brightening ingredients.",
         buyLink: "https://snippe.me/pay/rich-nourishing"
     },
@@ -215,7 +215,7 @@ const productsCatalogue = [
         category: "Body Care",
         sub: "Body Lotion",
         price: 35000,
-        image: "img_3014.jpg",
+        image: "IMG_3014.jpg",
         description: "Even-tone body lotion with natural brightening ingredients.",
         buyLink: "https://snippe.me/pay/exo"
     },
@@ -227,7 +227,7 @@ const productsCatalogue = [
         sub: "Body Lotion",
         price: 35000,
  
-        image: "img_3015.jpg",
+        image: "IMG_3015.jpg",
         description: "Even-tone body lotion with natural brightening ingredients.",
         buyLink: "https://snippe.me/pay/marula-glow"
     },
@@ -239,7 +239,7 @@ const productsCatalogue = [
         sub: "Body Lotion",
         price: 25000,
         
-        image: "img_3016.jpg",
+        image: "IMG_3016.jpg",
         description: "Even-tone body lotion with natural brightening ingredients.",
         buyLink: "https://snippe.me/pay/lux-botanicals"
     },
@@ -251,7 +251,7 @@ const productsCatalogue = [
         sub: "Body Lotion",
         price: 70000,
         
-        image: "img_3017.jpg",
+        image: "IMG_3017.jpg",
         description: "Even-tone body lotion with natural brightening ingredients.",
         buyLink: "https://snippe.me/pay/nivae-eventone"
     },
@@ -263,7 +263,7 @@ const productsCatalogue = [
         sub: "Body Lotion",
         price: 35000,
  
-        image: "img_3018.jpg",
+        image: "IMG_3018.jpg",
         description: "Even-tone body lotion with natural brightening ingredients.",
         buyLink: "https://snippe.me/pay/nivae-luminous-skin-glow"
     },
@@ -276,7 +276,7 @@ const productsCatalogue = [
         sub: "Body Lotion",
         price: 40000,
  
-        image: "img_3019.jpg",
+        image: "IMG_3019.jpg",
         description: "Even-tone body lotion with natural brightening ingredients.",
         buyLink: "https://snippe.me/pay/gluta-ce"
     },
@@ -288,7 +288,7 @@ const productsCatalogue = [
         sub: "Body Lotion",
         price: 50000,
  
-        image: "img_3020.jpg",
+        image: "IMG_3020.jpg",
         description: "Even-tone body lotion with natural brightening ingredients.",
         buyLink: "https://snippe.me/pay/alpha-arbutin"
     },
@@ -301,7 +301,7 @@ const productsCatalogue = [
         sub: "Body Lotion",
         price: 30000,
  
-        image: "img_3021.jpg",
+        image: "IMG_3021.jpg",
         description: "Even-tone body lotion with natural brightening ingredients.",
         buyLink: "https://snippe.me/pay/tea-tree"
     },
@@ -314,7 +314,7 @@ const productsCatalogue = [
         sub: "Body Lotion",
         price: 45000,
  
-        image: "img_3022.jpeg",
+        image: "IMG_3022.jpeg",
         description: "Even-tone body lotion with natural brightening ingredients.",
         buyLink: "https://snippe.me/pay/nivae-wash-gel"
     },
@@ -327,7 +327,7 @@ const productsCatalogue = [
         sub: "Body Lotion",
         price: 40000,
  
-        image: "img_3023.jpeg",
+        image: "IMG_3023.jpeg",
         description: "Even-tone body lotion with natural brightening ingredients.",
         buyLink: "https://snippe.me/pay/nivae-cream-wash"
     },
@@ -340,7 +340,7 @@ const productsCatalogue = [
         sub: "Body Lotion",
         price: 35000,
  
-        image: "img_3024.jpeg",
+        image: "IMG_3024.jpeg",
         description: "Even-tone body lotion with natural brightening ingredients.",
         buyLink: "https://snippe.me/pay/nivae-luminous-skin-glow"
     }
