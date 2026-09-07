@@ -204,7 +204,7 @@ const productsCatalogue = [
         category: "Body Care",
         sub: "Body Lotion",
         price: 35000,
-        image: "img_3013.jpg",
+        image: "IMG_3013.jpg",
         description: "Even-tone body lotion with natural brightening ingredients.",
         buyLink: "https://snippe.me/pay/mens-cream"
     },
